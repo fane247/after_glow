@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+user1 = User.create({
+
+	email: "fane247@gmail.com",
+	password: "password"
+
+})
+
 
 club_fabric = Club.create({
 
@@ -242,5 +249,7 @@ club_oval_space.save
 club_fire.events.push event_planet_angel
 club_fire.save
 
+user1.events.push event_shogun_audio
+user1.save
 
 

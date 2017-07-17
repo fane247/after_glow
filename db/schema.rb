@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 20170717153039) do
     t.index ["club_id"], name: "index_events_on_club_id"
   end
 
+  create_table "events_users", id: false, force: :cascade do |t|
+    t.bigint "event_id"
+    t.bigint "user_id"
+    t.index ["event_id"], name: "index_events_users_on_event_id"
+    t.index ["user_id"], name: "index_events_users_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

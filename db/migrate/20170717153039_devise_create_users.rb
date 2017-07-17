@@ -44,11 +44,17 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :image_url
 
       t.timestamps null: false
-    end
+    end 
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
+
+
+    create_table :events_users, id: false do |t|
+      t.belongs_to :event, index: true
+      t.belongs_to :user, index: true
+    end
   end
 end
