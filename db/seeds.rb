@@ -100,22 +100,22 @@ event_fabriclive = Event.create({
 	name: "FabricLive",
 	description: "FABRICLIVE awaits a very special appearance from one of drum & bass’s most influential acts this summer as Bad Company UK play Room One. One of the most highly-coveted groups in drum & bass. Also joining them is TC, who lands following the release of his debut ‘Unleash the Wolves’ LP last year. One of the pioneers of techstep is also locked in as Ed Rush lands, while Dispatch Recordings key player Xtrah returns following the drop of his ‘Disturbance EP’. Room One is rounded off by Insideinfo, Pola & Bryson and Kyrist, while MCs Carasel, AD, 2shy and Messy bring their lyrical wisdom to host the evening. In Room Two, we await a night with one of the UK’s key movements for bass culture as System:Sound take over hosting. They invite a slew of the best in up-front bass-weighted electronics as System's VIVEK lands. He plays alongside Deep Medi’s Commodo, as well as master in eclecticism Chimpo. Also slated is D&B stalwart Loxy, whose affiliation to labels like Exit and Samurai Music show his prowess in pushing 170BPM sounds. Room Two is finally rounded off with an appearance from System Roots. Hosting for the night comes courtesy of Dego Ranking, Donovan Kingjay and Crazy D.",
 	line_up: "
-		ROOM ONE:
-		Bad Company UK
-		TC
-		Ed Rush
-		Xtrah b2b Insideinfo
-		Pola & Bryson
-		Kyrist
-		MCs: Messy, 2SHY, Carasel, AD
+		ROOM ONE:\n
+		Bad Company UK\n
+		TC\n
+		Ed Rush\n
+		Xtrah b2b Insideinfo\n
+		Pola & Bryson\n
+		Kyrist\n
+		MCs: Messy, 2SHY, Carasel, AD\n
 
-		ROOM TWO: 
-		SYSTEM:SOUND
-		Vivek
-		Commodo
-		Chimpo
-		Loxy
-		System Roots
+		ROOM TWO:\n
+		SYSTEM:SOUND\n
+		Vivek\n
+		Commodo\n
+		Chimpo\n
+		Loxy\n
+		System Roots\n
 		MCs: Crazy D, Donovan Kingjay, Dego Ranking",
 	price: 22,
 	time_start: DateTime.new(2017,7,28,23,0,0),
@@ -130,18 +130,18 @@ event_dimensions = Event.create({
 
 	name: "DIMENSIONS: SUNFALL NIGHT SESSION",
 	description: "
-		Playing live in London for the first time in years, Larry Heard aka MR Fingers, one of the most prominent figures in the history of underground electronic music, will play a very special full live show. 
+		Playing live in London for the first time in years, Larry Heard aka MR Fingers, one of the most prominent figures in the history of underground electronic music, will play a very special full live show.\n
 
-		Also on the lineup is Berlin producer and DJ Palms Trax, whose melodic synths and smooth, undulating drum patterns have become his calling card. Dimensions very own Dimensions Soundsystem will also be digging deep into their collections alongside Phonox resident HAAi-. 
+		Also on the lineup is Berlin producer and DJ Palms Trax, whose melodic synths and smooth, undulating drum patterns have become his calling card. Dimensions very own Dimensions Soundsystem will also be digging deep into their collections alongside Phonox resident HAAi-.\n
 
-		A billing with names exclusive to this night party, don't miss joint day and night joint tickets... 
+		A billing with names exclusive to this night party, don't miss joint day and night joint tickets...\n 
 
 		18+ Photo ID Required",
 	line_up: "
-		LARRY HEARD aka MR FINGERS 
-		AMP FIDDLER (live) 
-		PALM TRAX 
-		HAAi 
+		LARRY HEARD aka MR FINGERS\n
+		AMP FIDDLER (live)\n
+		PALM TRAX\n
+		HAAi\n 
 		DIMENSIONS SOUNDSYSTEM",
 	price: 15,
 	time_start: DateTime.new(2017,8,12,22,0,0),
@@ -155,25 +155,25 @@ event_disco_special = Event.create({
 
 	name: "East London Summer Terrace Party - Funk, Soul & Disco Special",
 	description: "
-		Following the huge success of last summers East London Funk, Soul & Disco All Dayer, we're back this summer bigger and better, returning to the scenic canalside venue which ticks all of the party boxes - Oval Space alongside our friends Dope Disco.
+		Following the huge success of last summers East London Funk, Soul & Disco All Dayer, we're back this summer bigger and better, returning to the scenic canalside venue which ticks all of the party boxes - Oval Space alongside our friends Dope Disco.\n
 
 		We'll be raising the bar on last years festivities, which saw festival style production and world class DJ & Live sets from the likes of Joey Negro, Renegade Brass Band, Henry Wu and more!",
 	line_up: "
-		Very Special Guest TBA
+		Very Special Guest TBA\n
 
-		Thris Tian
+		Thris Tian\n
 
-		Love Ssega
+		Love Ssega\n
 
-		Get Down Edits (Defected Records)
+		Get Down Edits (Defected Records)\n
 
-		Wah Wah 45s
+		Wah Wah 45s\n
 
-		South Beach Recycling
+		South Beach Recycling\n
 
-		Gypsy Disco DJs
+		Gypsy Disco DJs\n
 
-		DJ Shaun Samuel
+		DJ Shaun Samuel\n
 
 		Love Kulture Project Soundsystem",
 	price: 12,
@@ -188,36 +188,36 @@ event_planet_angel = Event.create({
 
 	name: "PLANET ANGEL SUMMER SHOWCASE",
 	description: "
-		We feel like the world is too full of hate these days, a few too many walls being built and not enough bridges.
-		Here at Planet Angel we love love. And there’s nothing we love more than bringing like-minded people together to share a magical night of friendship, family, love and fantastic music!
+		We feel like the world is too full of hate these days, a few too many walls being built and not enough bridges.\n
+		Here at Planet Angel we love love. And there’s nothing we love more than bringing like-minded people together to share a magical night of friendship, family, love and fantastic music!\n
 
-		Planet Angel invites you to join us at our indoor festival for our Summer of Love, where Love Trumps Hate!
+		Planet Angel invites you to join us at our indoor festival for our Summer of Love, where Love Trumps Hate!\n
 
-		What to expect:
+		What to expect:\n
 
-		Fantastic soul uplifting music to get you moving and a grooving. Spanning from Trance, Psy Trance, Techno, Drum & Bass, House and Jungle.
+		Fantastic soul uplifting music to get you moving and a grooving. Spanning from Trance, Psy Trance, Techno, Drum & Bass, House and Jungle.\n
 
-		As always there will be our interactive Games and Art that you all know and love! Giant Jenga, Magnetic Poetry, UV Canvas Wall, Space Hoppers, Connect 4, Plasticene, Face Painters, Lego and our famous Sticker Matching Game! Find your matching sticker partner and head to the shop to collect your prize!
+		As always there will be our interactive Games and Art that you all know and love! Giant Jenga, Magnetic Poetry, UV Canvas Wall, Space Hoppers, Connect 4, Plasticene, Face Painters, Lego and our famous Sticker Matching Game! Find your matching sticker partner and head to the shop to collect your prize!\n
 
-		Whether you're a Planet Angel Virgin or a Hard Core Planeteer, looking to make new friends or connect with old ones, there's something for everyone at our party.
+		Whether you're a Planet Angel Virgin or a Hard Core Planeteer, looking to make new friends or connect with old ones, there's something for everyone at our party.\n
 
-		So come to the friendliest party in London and join the Planet Angel Family!
+		So come to the friendliest party in London and join the Planet Angel Family!\n
 
-		We can’t wait to see you all there!
+		We can’t wait to see you all there!\n
 		Big Love Xx",
 	line_up: "
-		MELTDOWN ROOM:
+		MELTDOWN ROOM:\n
 
-		DJAIDED (Debut)
-		For Planet Angel’s Summer of Love, Djaided will be opening the Meltdown room with her hypnotic Techno grooves, warming us up for what’s set to be a scorcher!
+		DJAIDED (Debut)\n
+		For Planet Angel’s Summer of Love, Djaided will be opening the Meltdown room with her hypnotic Techno grooves, warming us up for what’s set to be a scorcher!\n
 
-		LOKI (Resident)
-		Taking us to the next level, he will turn us up a notch with a fusion of progressive, tech and uplifting trance for a journey of euphoric beats and sounds.
+		LOKI (Resident)\n
+		Taking us to the next level, he will turn us up a notch with a fusion of progressive, tech and uplifting trance for a journey of euphoric beats and sounds.\n
 
-		MELODIC NOISE (Debut)
-		Now on the Enterrec label and aiming for the European scene, this is one guy to make sure you’re on the dance floor for. We can’t wait for his psychedelic performance in the Meltdown room to entice us all into the rhythm!
+		MELODIC NOISE (Debut)\n
+		Now on the Enterrec label and aiming for the European scene, this is one guy to make sure you’re on the dance floor for. We can’t wait for his psychedelic performance in the Meltdown room to entice us all into the rhythm!\n
 
-		RYD3R
+		RYD3R\n
 		Now working for Biopulse Records as a label Dj and producer Ryd3r intends to impress on his return to Planet Angel and bring us a unique blend of Tech and PsyTrance to take you on a journey of the senses.",
 	price: 16,
 	time_start: DateTime.new(2017,8,11,22,0,0),
