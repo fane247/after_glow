@@ -62,15 +62,6 @@ club_fire = Club.create({
 })
 
 
-      t.string :name
-      t.string :description
-      t.string :line_up
-      t.float :price
-      t.datetime :time_start
-      t.datetime :time_end
-      t.string :image_url
-
-
 event_shogun_audio = Event.create({
 
 	name: "Shogun Audio 13th Birthday",
@@ -227,8 +218,29 @@ event_planet_angel = Event.create({
 })
 
 
+# users1.bands.push bands1
+# users1.save
 
+# chat.users.push users1
+# chat.users.push user2
 
+club_fabric.events.push event_fabriclive
+club_fabric.save
+
+club_electric.events.push event_dimensions
+club_electric.save
+
+club_mangle.events.push event_shogun_audio
+club_mangle.save
+
+club_nest.events.push event_blackout
+club_nest.save
+
+club_oval_space.events.push event_disco_special
+club_oval_space.save
+
+club_fire.events.push event_planet_angel
+club_fire.save
 
 
 
