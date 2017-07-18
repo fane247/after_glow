@@ -19,9 +19,15 @@ class EventsController < ApplicationController
   def create
 
     @event = Event.create(event_params)
+    @event.image_url = params[:event][:image_url].original_filename
+    @event.club_id = params[:club][:club_id]
+    # byebug
+
     @event.save
-    puts @event
-    redirect_to 
+    # byebug
+    puts  @event.errors
+
+    redirect_to
 
   end
 
@@ -37,7 +43,7 @@ class EventsController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:name, :description, :line_up, :price, :time_start, :time_end, :club_id)
+      params.require(:event).permit(:name, :description, :line_up, :price, :time_start, :time_end, :club_id, :image_url)
     end
 
 

@@ -32,17 +32,17 @@
     	<%= form.datetime_local_field :time_end, start_year: 2017, id: :time_end_event %> 	
     </div>
 
-<!--       <div class="field">
-    	<%= form.label :club_id %>
-    	<%= form.number_field :club_id%> 	
-    </div> -->
+    <div class="field">
+    	<%= form.label :image_url %>
+    	<%= form.file_field :image_url %>
+
+    </div>
+
     <div class="field">
     	
     	<%= select("club", "club_id", @clubs.collect {|club| [ club.name, club.id ] }, {include_blank: false}) %>
 
     </div>
-   
-
     <!-- yet to impliment image upload -->
 
     <div class="field">
