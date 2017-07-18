@@ -21,6 +21,65 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob %>
+    <%= f.date_field :dob %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= select("gender", ["Male", "Female"] {include_blank: false}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :music_genre_likes %>
+    <%= f.text_area :music_genre_likes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :interests %>
+    <%= f.text_area :interests %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seeking_age_range_low %>
+    <%= f.text_area :seeking_age_range_low %>
+    <p> to </p>
+    <%= f.label :seeking_age_range_high %>
+    <%= f.text_area :seeking_age_range_high %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seeking_gender %>
+    <%= select("gender", ["Male", "Female"] {include_blank: false}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.file_field :image_url, value: :image_url  %>
+
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
