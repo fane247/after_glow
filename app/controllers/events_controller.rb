@@ -32,17 +32,19 @@ class EventsController < ApplicationController
     @event = Event.create(event_params)
     @event.image_url = params[:event][:image_url].original_filename
     @event.club_id = params[:club][:club_id]
-    # byebug
 
     @event.save
-    # byebug
-    puts  @event.errors
-
     redirect_to
 
   end
 
   def edit
+
+    byebug
+    @event = Event.find(params[:id])
+    @clubs = Club.all
+
+
   end
 
   def user_attending
@@ -67,12 +69,21 @@ class EventsController < ApplicationController
   def user_not_attending
 
     @event = Event.find(params[:id])
-    byebug
+    # byebug
     @event.users.find(current_user.id)
     
   end
 
   def update
+
+    @event = Event.find(params[:id])
+    @event.update(event_params)
+    @event.image_url = params[:event][:image_url].original_filename
+    @event.club_id = params[:club][:club_id]
+
+    @event.save
+    redirect_to events_path
+
   end
 
   def delete
