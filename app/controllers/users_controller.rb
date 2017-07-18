@@ -21,4 +21,11 @@ class UsersController < ApplicationController
 
   def delete
   end
+
+  def profile
+
+    @user = current_user
+
+  end
+
 end

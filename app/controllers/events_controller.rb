@@ -95,6 +95,8 @@ class EventsController < ApplicationController
       params.require(:event).permit(:name, :description, :line_up, :price, :time_start, :time_end, :club_id, :image_url)
     end
 
+    
+
 
 
 end
