@@ -9,7 +9,8 @@
 user1 = User.create({
 
 	email: "fane247@gmail.com",
-	password: "password"
+	password: "password",
+	name: "Fane Fonseka",
 
 })
 
@@ -231,7 +232,7 @@ event_planet_angel = Event.create({
 # chat.users.push users1
 # chat.users.push user2
 
-club_fabric.events.push event_fabriclive
+club_fabric.events.push event_fabriclive 
 club_fabric.save
 
 club_electric.events.push event_dimensions
@@ -250,6 +251,8 @@ club_fire.events.push event_planet_angel
 club_fire.save
 
 user1.events.push event_shogun_audio
+user1.events.push event_blackout
+user1.events.push event_planet_angel
 user1.save
 
 
