@@ -31,7 +31,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       # t.datetime :locked_at
 
       t.string :name
-      t.integer :age
+      t.date :dob
       t.string :gender
       t.string :music_genre_likes
       t.string :bio

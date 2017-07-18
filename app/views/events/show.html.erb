@@ -1,2 +1,18 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+
+<img src="<%= @event.image_url.square %>">
+<h3><%= @event.name %></h3>
+<h4><%= link_to @event.club.name, @event.club %></h4>
+<p>Description: <%= @event.description %></p>
+<p>line-up: <%= @event.line_up %></p>
+<div><%= @event.time_start %> - <%= @event.time_end %></div>
+
+<% @event.users.each do |user| %>
+
+	<p>Attending: <%= user.name %></p>
+
+<% end %>
+
+
+<%= link_to(@attending_text, user_attending_path, method: :put) %>
+
+

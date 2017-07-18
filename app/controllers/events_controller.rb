@@ -1,12 +1,23 @@
 class EventsController < ApplicationController
-  
-  def index
+  before_action :authenticate_user!
 
+  def index
+    # byebug
     @events = Event.all
+    @current_user = current_user
 
   end
 
   def show
+
+    @event = Event.find(params[:id])
+    user_attending = @event.users.exists? current_user.id
+
+    if user_attending
+      @attending_text = "Not Attending"
+    else
+      @attending_text = "Attending"
+    end
   end
 
   def new
@@ -32,6 +43,33 @@ class EventsController < ApplicationController
   end
 
   def edit
+  end
+
+  def user_attending
+
+    @event = Event.find(params[:id])
+    # byebug
+
+    if @event.users.exists? current_user.id
+
+      @event.users.delete(current_user.id)
+
+    else
+
+      @event.users.push(current_user)
+
+    end
+
+    redirect_to "/events/#{params[:id]}"
+
+  end
+
+  def user_not_attending
+
+    @event = Event.find(params[:id])
+    byebug
+    @event.users.find(current_user.id)
+    
   end
 
   def update

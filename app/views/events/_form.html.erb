@@ -1,0 +1,54 @@
+<%= form_with(model: @event) do |form| %>
+
+	<div class="field">
+			
+		<%= form.label :name %>
+	    <%= form.text_field :name, id: :event_name %>
+
+    </div>
+
+    <div class="field">
+		<%= form.label :description %>
+    	<%= form.text_area :description, id: :event_description %>
+    </div>
+
+    <div class="field">
+    	<%= form.label :line_up %>
+    	<%= form.text_field :line_up, id: :event_line_up %>
+    </div>
+
+    <div class="field">
+	    <%= form.label :price %>
+   		<%= form.number_field :price, id: :event_price %>
+    </div>
+
+    <div class="field">
+    	<%= form.label :time_start %>
+    	<%= form.datetime_local_field :time_start, start_year: 2017, id: :time_start_event %> 	
+    </div>
+
+    <div class="field">
+    	<%= form.label :time_end %>
+    	<%= form.datetime_local_field :time_end, start_year: 2017, id: :time_end_event %> 	
+    </div>
+
+    <div class="field">
+    	<%= form.label :image_url %>
+    	<%= form.file_field :image_url %>
+
+    </div>
+
+    <div class="field">
+    	
+    	<%= select("club", "club_id", @clubs.collect {|club| [ club.name, club.id ] }, {include_blank: false}) %>
+
+    </div>
+    <!-- yet to impliment image upload -->
+
+    <div class="field">
+    	<%= form.submit %>	
+    </div>
+
+   
+
+<% end %>
