@@ -7,7 +7,8 @@
 				<img src="<%= event.image_url.square %>">
 				<h3><%= link_to event.name, event %></h3>
 				<h4><%= link_to event.club.name, event.club %></h4>
-				<div><%= event.time_start %> - <%= event.time_end %></div>
+				<div class="event-index-date"><%= event.time_start.to_date %></div>
+				<div class="event-index-time"><%= event.time_start.strftime("%H:%M") %> - <%= event.time_end.strftime("%H:%M") %></div>
 			</div>
 		</div>
 	<% end %>

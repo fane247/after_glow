@@ -5,11 +5,6 @@ module ApplicationHelper
     	now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
 	end
 
-	def time_converter date
-
-
-	end
-
 
 
 end

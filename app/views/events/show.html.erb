@@ -1,34 +1,61 @@
 
 
 
-<div class="container">
-	<div class="row">
-		<img src="<%= @event.image_url.square %>">
+
+<div class="row event">
+	<div class="col-md-12">
 		<h3><%= @event.name %></h3>
 		<h4><%= link_to @event.club.name, @event.club %></h4>
+	</div>
+</div>
+<div class="row event">
+	<div class="col-md-4">
+		<%= image_tag @event.image_url.square, class: "img-responsive" %>
+		<div class="event-date"><%= @event.time_start.to_date %></div>
+		<div class="event-time"><%= @event.time_start.strftime("%H:%M") %> - <%= @event.time_end.strftime("%H:%M") %></div>
+
+	</div>
+	<div class="col-md-8">
 		<p>Description: <%= @event.description %></p>
-		<p>line-up: <%= @event.line_up %></p>
-		<div><%= @event.time_start %> - <%= @event.time_end %></div>
-
-		<% @event.users.each do |user| %>
-
-			<p>Attending: <%= user.name %></p>
-
-		<% end %>
-
+		<p>line-up: <%= @event.line_up %></p>	
+	</div>
+</div>
+<div class="row event">
+	<div class="col-md-12">
 		<%= render '/events/partials/admin_event_change.html.erb' %>
 
 		<% if user_signed_in? %>
 
-			<%= link_to(@attending_text, user_attending_path, method: :put) %>
+			<%= link_to(@attending_text, user_attending_path, class: "btn btn-default", method: :put ) %>
 
 		<% else %>
 
-			<%= link_to('Register to Attend!', new_user_registration_path)  %>
+			<%= link_to('Register to Attend!', new_user_registration_path, class: "btn btn-default")  %>
 
 		<% end %>
+
 	</div>
+
+
 </div>
+	
+
+<div class="row">
+	<h3>Attending:</h3>
+	
+	<% @event.users.each do |user| %>
+
+		<div class="col-md-4 user-small">
+			<%= image_tag user.image_url.square, class: "img-responsive" %>
+			<p>Name: <%= user.name %></p>
+			<p>Age: <%= age_converter user.dob %></p> 
+			<p>Seeking a <%= user.seeking_gender %> aged <%= user.seeking_age_range_low %> to <%= user.seeking_age_range_high %></p> 
+		</div>
+
+	<% end %>
+
+</div>
+
 
 
 
