@@ -1,13 +1,38 @@
 <h1><%= @user.name %></h1>
 
-<p><%= @user.age %></p>
-<p><%= @user.gender %></p>
-<p><%= @user.music_genre_likes %></p>
-<p><%= @user.bio %></p>
-<p><%= @user.height %></p>
-<p><%= @user.city %></p>
-<p><%= @user.interests %></p>
-<p>seeking a <%= @user.seeking_gender %> aged <%=@user.seeking_age_range_low %> to <%= @user.seeking_age_range_high %></p>
+<div class="user-info">
+	<p><%= @user.age %></p>
+	<p><%= @user.gender %></p>
+	<p><%= @user.music_genre_likes %></p>
+	<p><%= @user.bio %></p>
+	<p><%= @user.height %></p>
+	<p><%= @user.city %></p>
+	<p><%= @user.interests %></p>
+	<p>seeking a <%= @user.seeking_gender %> aged <%=@user.seeking_age_range_low %> to <%= @user.seeking_age_range_high %></p>
+</div>
+
+<div>
+
+	<ul>
+		<% @user.events.each do |event| %>
+
+			<img src="<%= event.image_url.square %>">
+			<h3><%= link_to event.name, event %></h3>
+			<h4><%= link_to event.club.name, event.club %></h4>
+			<p>Description: <%= event.description %></p>
+			<p>line-up: <%= event.line_up %></p>
+			<div><%= event.time_start %> - <%= event.time_end %></div>
+
+		<% end %>
+
+	</ul>
+
+
+
+</div>
+
+
+
 
 
 

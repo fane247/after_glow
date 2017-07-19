@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :rating %>
-    <%= form.number_field :rating, id: :club_rating %>
+    <%= form.number_field :rating, id: :club_rating, in: 1..5, value: @club.rating %>
   </div>
 
   <div class="field">

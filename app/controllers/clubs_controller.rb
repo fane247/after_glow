@@ -15,6 +15,7 @@ class ClubsController < ApplicationController
   # GET /clubs/new
   def new
     @club = Club.new
+    @club.rating = 1
   end
 
   # GET /clubs/1/edit
