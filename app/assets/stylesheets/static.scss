@@ -3,10 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-
-
-
 #logo {
 	margin:0 35% 0 35%;
 	width:30%;
@@ -30,7 +26,8 @@
 	-webkit-filter: drop-shadow(0px 0px 8px rgba(255, 226, 0, 0.8));
 }
 
-body {
+.welcome-page {
 
 	background-color: black;
+	height: 828px;
 }

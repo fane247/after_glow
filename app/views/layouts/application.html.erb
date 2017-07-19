@@ -15,30 +15,57 @@
   </head>
 
   <body>
-  <header>
 
-    <div id="logo">
-      <img class="shadowfilter" src="assets/logo_3_black.jpg" />
+    <div class="container">
+ 
+      <header>
+        <div id="logo-index">
+          <img class="shadowfilter-index" src="assets/logo_3_black.jpg" />
+        </div>
+      </header>
+      <nav>
+        <ul class="hmenu">
+
+          
+         
+          
+          
+          
+          
+          
+
+        </ul>
+
+      </nav>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <%= link_to 'Events', events_path, class: "navbar-brand"%>
+          </div>
+          <div class="navbar-header">
+            <%= render 'devise/menu/registration_items'%>
+          </div>
+          <div class="navbar-header">
+            <%= render 'devise/menu/login_items' %>
+          </div>
+          <div class="navbar-header">
+            <%= render '/layouts/partials/my_profile'%>
+          </div>
+          <div class="navbar-header">
+            <%= link_to 'Clubs', clubs_path, class: "navbar-brand"%>
+          </div>
+          <div class="navbar-header">
+            <%= render '/layouts/partials/admin_add_nav', class: "navbar-brand" %>
+          </div>
+        </div>
+      </nav>
+
+
+
+    	<p class="notice"><%= notice %></p>
+    	<p class="alert"><%= alert %></p>
+      <%= yield %>
+
     </div>
-
-  </header>
-  <nav>
-    <ul class="hmenu">
-
-      <%= render '/layouts/partials/my_profile' %>
-      <li><%= link_to 'Clubs', clubs_path %></li>
-      <%= render '/layouts/partials/admin_add_nav' %>
-      <li><%= link_to 'Events', events_path %></li>
-      <%= render 'devise/menu/registration_items' %>
-      <%= render 'devise/menu/login_items' %>
-
-    </ul>
-  </nav>
-
-
-
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-    <%= yield %>
   </body>
 </html>

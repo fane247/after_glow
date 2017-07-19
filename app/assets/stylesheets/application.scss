@@ -10,8 +10,50 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+header {
+
+	background-color: black;
+	height: 300px;
+	width:100%;
+	position: relative;
+
+}
+
+body {
+
+	background-color: white;
+}
+
+#logo-index {
+
+	margin:0 35% 0 35%;
+  	// background: #ffe200;
+
+}
+
+#logo-index img {
+
+	margin-left: -85px;
+	width: 176%;
+	margin-top: 32%;
+}
+
+.shadowfilter-index {
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,0,0.80));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	
+}
+.shadowfilter-index:hover {
+	-webkit-filter: drop-shadow(0px 0px 8px rgba(255, 226, 0, 0.8));
+}
 
 
