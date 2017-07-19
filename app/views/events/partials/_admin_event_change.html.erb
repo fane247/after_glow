@@ -1,0 +1,6 @@
+<% if user_signed_in? && current_user.is_admin %>
+
+	<%= link_to("Edit", edit_event_path, method: :put) %>
+	<%= link_to("Delete", "/events/:id", method: :delete,  data: {confirm: "Are you sure?"} ) %>
+
+<% end %>

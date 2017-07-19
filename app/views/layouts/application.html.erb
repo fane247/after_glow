@@ -19,9 +19,9 @@
   <nav>
     <ul class="hmenu">
 
-      <li><%= link_to 'My Profile', user_profile_path(current_user.id) %></li>
+      <%= render '/layouts/partials/my_profile' %>
       <li><%= link_to 'Clubs', clubs_path %></li>
-      <li><%= link_to 'Add a Club', new_club_path %></li>
+      <%= render '/layouts/partials/admin_add_nav' %>
       <li><%= link_to 'Events', events_path %></li>
       <%= render 'devise/menu/registration_items' %>
       <%= render 'devise/menu/login_items' %>

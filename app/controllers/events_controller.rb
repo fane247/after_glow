@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!
+  
 
   def index
     # byebug
@@ -11,13 +11,17 @@ class EventsController < ApplicationController
   def show
 
     @event = Event.find(params[:id])
-    user_attending = @event.users.exists? current_user.id
 
-    if user_attending
-      @attending_text = "Not Attending"
-    else
-      @attending_text = "Attending"
+    if user_signed_in?
+      user_attending = @event.users.exists? current_user.id
+   
+      if user_attending
+        @attending_text = "Not Attending"
+      else
+        @attending_text = "Attending"
+      end
     end
+
   end
 
   def new

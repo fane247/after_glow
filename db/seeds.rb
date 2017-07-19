@@ -21,7 +21,8 @@ user1 = User.create({
 	seeking_age_range_low: 25,
 	seeking_age_range_high: 36,
 	seeking_gender: "Female",
-	image_url: "/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/profile_fane.jpg"
+	image_url: File.open("/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/profile_fane.jpg"),
+	is_admin: true
 })
 
 

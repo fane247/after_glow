@@ -43,6 +43,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.integer :seeking_age_range_high
       t.string :seeking_gender
       t.string :image_url
+      t.boolean :is_admin, default: false
 
       t.timestamps null: false
     end 

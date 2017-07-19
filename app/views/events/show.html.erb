@@ -12,7 +12,18 @@
 
 <% end %>
 
+<%= render '/events/partials/admin_event_change.html.erb' %>
 
-<%= link_to(@attending_text, user_attending_path, method: :put) %>
+<% if user_signed_in? %>
+
+	<%= link_to(@attending_text, user_attending_path, method: :put) %>
+
+<% else %>
+
+	<%= link_to('Register to Attend!', new_user_registration_path)  %>
+
+<% end %>
+
+
 
 
