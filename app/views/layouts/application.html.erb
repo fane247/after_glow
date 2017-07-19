@@ -36,14 +36,15 @@
           <div class="navbar-header">
             <%= render 'devise/menu/login_items' %>
           </div>
-          <div class="navbar-header">
-            <%= render '/layouts/partials/my_profile'%>
-          </div>
+
           <div class="navbar-header">
             <%= link_to 'Clubs', clubs_path, class: "navbar-brand"%>
           </div>
           <div class="navbar-header">
-            <%= render '/layouts/partials/admin_add_nav', class: "navbar-brand" %>
+            <%= render '/layouts/partials/my_profile'%>
+          </div>
+          <div class="navbar-header">
+            <%= render '/layouts/partials/admin_add_nav' %>
           </div>
         </div>
       </nav>
