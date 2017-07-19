@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root to: "events#index"
+  get 'static/welcome'
+
+  root to: "static#welcome"
 
   put '/events/:id', to: 'events#user_attending', as: :user_attending
   

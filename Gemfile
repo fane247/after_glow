@@ -10,6 +10,7 @@ gem 'autoprefixer-rails'
 gem 'carrierwave', '0.10.0'
 gem "mini_magick"
 gem "fog"
+gem 'jquery-rails'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
