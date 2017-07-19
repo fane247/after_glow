@@ -1,6 +1,6 @@
 <% if user_signed_in? && current_user.is_admin %>
 
-	<%= link_to("Edit", edit_event_path, method: :put, class: "btn btn-default") %>
-	<%= link_to("Delete", "/events/:id", method: :delete,  data: {confirm: "Are you sure?"},class: "btn btn-default" ) %>
+	<%= link_to("Edit", edit_event_path, method: :get,class: "btn btn-default") %>
+	<%= link_to("Delete", @event, method: :delete,  data: {confirm: "Are you sure?"}, class: "btn btn-default" ) %>
 
 <% end %>

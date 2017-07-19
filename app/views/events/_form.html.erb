@@ -1,52 +1,52 @@
 <%= form_with(model: @event) do |form| %>
 
-	<div class="field">
+	<div class="form-group">
 			
 		<%= form.label :name %>
-	    <%= form.text_field :name, id: :event_name %>
+	    <%= form.text_field :name, id: :event_name, class: "form-control" %>
 
     </div>
 
-    <div class="field">
+    <div class="form-group">
 		<%= form.label :description %>
-    	<%= form.text_area :description, id: :event_description %>
+    	<%= form.text_area :description, id: :event_description, class: "form-control" %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
     	<%= form.label :line_up %>
-    	<%= form.text_field :line_up, id: :event_line_up %>
+    	<%= form.text_field :line_up, id: :event_line_up, class: "form-control" %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
 	    <%= form.label :price %>
-   		<%= form.number_field :price, id: :event_price %>
+   		<%= form.number_field :price, id: :event_price, class: "form-control" %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
     	<%= form.label :time_start %>
-    	<%= form.datetime_local_field :time_start, start_year: 2017, id: :time_start_event %> 	
+    	<%= form.datetime_local_field :time_start, start_year: 2017, id: :time_start_event, class: "form-control" %> 	
     </div>
 
-    <div class="field">
+    <div class="form-group">
     	<%= form.label :time_end %>
-    	<%= form.datetime_local_field :time_end, start_year: 2017, id: :time_end_event %> 	
+    	<%= form.datetime_local_field :time_end, start_year: 2017, id: :time_end_event, class: "form-control" %> 	
     </div>
 
-    <div class="field">
+    <div class="form-group">
     	<%= form.label :image_url %>
-    	<%= form.file_field :image_url, value: :image_url  %>
+    	<%= form.file_field :image_url, value: :image_url, class: "btn btn-default"  %>
 
     </div>
 
-    <div class="field">
+    <div class="form-group">
     	
-    	<%= select("club", "club_id", @clubs.collect {|club| [ club.name, club.id ] }, {include_blank: false}) %>
+    	<%= select("club", "club_id", @clubs.collect {|club| [ club.name, club.id ] }, {include_blank: false, class: "filestyle"}) %>
 
     </div>
     <!-- yet to impliment image upload -->
 
-    <div class="field">
-    	<%= form.submit %>	
+    <div class="actions">
+    	<%= form.submit "Submit", class: "btn btn-default" %>	
     </div>
 
    

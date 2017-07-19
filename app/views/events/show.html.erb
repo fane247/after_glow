@@ -10,7 +10,7 @@
 </div>
 <div class="row event">
 	<div class="col-md-4">
-		<%= image_tag @event.image_url.square, class: "img-responsive" %>
+		<%= image_tag @event.image_url.square, class: "img-responsive img-center" %>
 		<div class="event-date"><%= @event.time_start.to_date %></div>
 		<div class="event-time"><%= @event.time_start.strftime("%H:%M") %> - <%= @event.time_end.strftime("%H:%M") %></div>
 

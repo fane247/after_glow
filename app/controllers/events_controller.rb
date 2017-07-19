@@ -44,7 +44,6 @@ class EventsController < ApplicationController
 
   def edit
 
-    byebug
     @event = Event.find(params[:id])
     @clubs = Club.all
 
@@ -90,7 +89,11 @@ class EventsController < ApplicationController
 
   end
 
-  def delete
+  def destroy
+    # byebug
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to "/events/"
   end
 
   private
