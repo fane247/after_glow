@@ -1,0 +1,7 @@
+
+<% if user_signed_in? %>
+
+	<li><%= link_to 'Add a Club', new_club_path %></li>
+	<li><%= link_to 'Add an event', new_event_path %></li>
+	
+<% end %>
