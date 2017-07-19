@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20170717153039) do
     t.inet "last_sign_in_ip"
     t.string "name"
     t.date "dob"
+    t.integer "age"
     t.string "gender"
     t.string "music_genre_likes"
     t.string "bio"

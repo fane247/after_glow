@@ -11,7 +11,17 @@ user1 = User.create({
 	email: "fane247@gmail.com",
 	password: "password",
 	name: "Fane Fonseka",
-
+	dob: Date.new(1990, 8, 7),
+	gender: "Male",
+	music_genre_likes: "drum and bass, breaks, dubstep",
+	bio: "I like long walk's on the beach, sunsets and a dirty bassline",
+	height: 180,
+	city: "London",
+	interests: "Kayaking, running, hiking, outdoors, music production",
+	seeking_age_range_low: 25,
+	seeking_age_range_high: 36,
+	seeking_gender: "Female",
+	image_url: "/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/profile_fane.jpg"
 })
 
 

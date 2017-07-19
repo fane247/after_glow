@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   
   def index
   end
@@ -11,6 +11,9 @@ class UsersController < ApplicationController
   end
 
   def create
+
+    @user.age = age(@user.dob)
+
   end
 
   def edit
@@ -27,5 +30,11 @@ class UsersController < ApplicationController
     @user = current_user
 
   end
+
+  def age(dob)
+    now = Time.now.utc.to_date
+    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
+  end
+
 
 end
