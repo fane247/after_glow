@@ -1,91 +1,93 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+<div class="form-container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="form-group">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="form-group">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :dob %>
-    <%= f.date_field :dob %>
-  </div>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control"%>
+    </div>
 
-  <%f.hidden_field :age, :value => @age %>
+    <div class="form-group">
+      <%= f.label :dob %>
+      <%= f.date_field :dob, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :gender %>
+      <%= select(:genders, :gender, ["Male", "Female"], class: "form-control") %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :music_genre_likes %>
+      <%= f.text_area :music_genre_likes, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :bio %>
+      <%= f.text_area :bio, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Hieght (cm)"%>
+      <%= f.number_field :height, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :interests %>
+      <%= f.text_area :interests, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Seeking a " %>
+      <%= select(:seeking_genders, :seeking_gender, ["Male", "Female"],class: "form-control") %>
+      <%= f.label " aged " %>
+      <%= f.text_field :seeking_age_range_low %>
+      <span> to </span>
+      <%= f.text_field :seeking_age_range_high %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Upload Profile Picture"%>
+      <%= f.file_field :image_url, value: :image_url, class: "filestyle"  %>
+    </div>
+
+    <div class="row">
+      <div></div>
+
+    </div>
+    <div class="actions">
+      <%= f.submit "Sign up", class: "btn btn-default" %>
+      <%= render "devise/shared/links" %>
+    </div>
+
+  <% end %>
+
+</div>
 
 
-  <div class="field">
-    <%= f.label :gender %>
-    <%= select(:genders, :gender, ["Male", "Female"]) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :music_genre_likes %>
-    <%= f.text_area :music_genre_likes %>
-  </div>
-
-  <div class="field">
-    <%= f.label :bio %>
-    <%= f.text_area :bio %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Hieght (cm)"%>
-    <%= f.text_field :height %>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-  </div>
-
-  <div class="field">
-    <%= f.label :interests %>
-    <%= f.text_area :interests %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Seeking a " %>
-    <%= select(:seeking_genders, :seeking_gender, ["Male", "Female"]) %>
-    <%= f.label " aged " %>
-    <%= f.text_field :seeking_age_range_low %>
-    <span> to </span>
-    <%= f.text_field :seeking_age_range_high %>
-  </div>
-
-  <div class="field">
-
-  </div>
-
-  <div class="field">
-    <%= f.label :image_url %>
-    <%= f.file_field :image_url, value: :image_url  %>
-
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

@@ -1,14 +1,16 @@
 
-<p><%= @curent_user %></p>
+<div class="row">
 
 <% @events.each do |event| %>
-	<img src="<%= event.image_url.square %>">
-	<h3><%= link_to event.name, event %></h3>
-	<h4><%= link_to event.club.name, event.club %></h4>
-	<p>Description: <%= event.description %></p>
-	<p>line-up: <%= event.line_up %></p>
-	<div><%= event.time_start %> - <%= event.time_end %></div>
+		<div class="col-md-4">
+			<div class="event-info-small">
+				<img src="<%= event.image_url.square %>">
+				<h3><%= link_to event.name, event %></h3>
+				<h4><%= link_to event.club.name, event.club %></h4>
+				<div><%= event.time_start %> - <%= event.time_end %></div>
+			</div>
+		</div>
+	<% end %>
+</div>
 
 
-
-<% end %>

@@ -1,28 +1,34 @@
 
-<img src="<%= @event.image_url.square %>">
-<h3><%= @event.name %></h3>
-<h4><%= link_to @event.club.name, @event.club %></h4>
-<p>Description: <%= @event.description %></p>
-<p>line-up: <%= @event.line_up %></p>
-<div><%= @event.time_start %> - <%= @event.time_end %></div>
 
-<% @event.users.each do |user| %>
 
-	<p>Attending: <%= user.name %></p>
+<div class="container">
+	<div class="row">
+		<img src="<%= @event.image_url.square %>">
+		<h3><%= @event.name %></h3>
+		<h4><%= link_to @event.club.name, @event.club %></h4>
+		<p>Description: <%= @event.description %></p>
+		<p>line-up: <%= @event.line_up %></p>
+		<div><%= @event.time_start %> - <%= @event.time_end %></div>
 
-<% end %>
+		<% @event.users.each do |user| %>
 
-<%= render '/events/partials/admin_event_change.html.erb' %>
+			<p>Attending: <%= user.name %></p>
 
-<% if user_signed_in? %>
+		<% end %>
 
-	<%= link_to(@attending_text, user_attending_path, method: :put) %>
+		<%= render '/events/partials/admin_event_change.html.erb' %>
 
-<% else %>
+		<% if user_signed_in? %>
 
-	<%= link_to('Register to Attend!', new_user_registration_path)  %>
+			<%= link_to(@attending_text, user_attending_path, method: :put) %>
 
-<% end %>
+		<% else %>
+
+			<%= link_to('Register to Attend!', new_user_registration_path)  %>
+
+		<% end %>
+	</div>
+</div>
 
 
 
