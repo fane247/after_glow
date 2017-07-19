@@ -1,3 +1,36 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
+#logo {
+	margin:0 35% 0 35%;
+	width:30%;
+	height:auto;
+  	/*background: #ffe200;*/
+}
+
+#logo img {
+	width:100%;
+	height:auto;
+	margin-top: 72%;
+}
+
+.shadowfilter {
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,0,0.80));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	
+}.shadowfilter:hover {
+	-webkit-filter: drop-shadow(0px 0px 8px rgba(255, 226, 0, 0.8));
+}
+
+body {
+
+	background-color: black;
+}
