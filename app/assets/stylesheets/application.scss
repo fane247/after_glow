@@ -93,6 +93,43 @@ input {
 
 }
 
+.message-box {
+
+	height: 462px;
+    background-color: white;
+}
+
+            // <div class="col-md-4">
+
+.message-current-user{
+
+	background: lightblue;
+    color: black;
+    width: 37%;
+    border-radius: 13px;
+    padding: 1% 2%;
+
+}
+
+.message-other-user{
+
+	background: orange;
+    color: black;
+    width: 37%;
+    border-radius: 13px;
+    padding: 1% 2%;
+    float: right;
+}
+
+.message-row {
+
+	display: block;
+	min-height: 12%;
+
+}
+
+
+
 @media only screen and (max-width: 1024px) {
 
     header {
@@ -111,10 +148,6 @@ input {
     header {
         height: 69px;
     }
-
-
-    
-
 
 }
 
