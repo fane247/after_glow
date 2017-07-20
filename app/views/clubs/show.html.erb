@@ -1,5 +1,5 @@
 
-<div>
+
   <div class="row info">
     <div class="col-md-4">
       <%= image_tag @club.image_url, class: "img-responsive" %>
@@ -37,11 +37,12 @@
     
     <% end %>
   </div>
-
-</div>
-
-
+  <%= render '/events/partials/admin_event_change.html.erb' %>
+  <%= link_to 'Back', clubs_path, class: 'btn btn-default' %>
 
 
-<%= render '/events/partials/admin_event_change.html.erb' %>
-<%= link_to 'Back', clubs_path, class: 'btn btn-default' %>
+
+
+
+
+

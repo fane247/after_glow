@@ -17,13 +17,13 @@
 
   <body>
 
-    <div class="container">
+    
       <div class="row">
         <div class="col-md-12 top">
           <header>
             <div id="logo-index">
               <!-- <img class="shadowfilter-index" src="assets/logo_3_black.jpg" /> -->
-              <%= image_tag "logo_3_black.jpg", class: 'shadowfilter-index' %>
+              <%= image_tag "logo_3_black.jpg", class: 'shadowfilter-index img-responsive' %>
             </div>
           </header>
 
@@ -45,22 +45,24 @@
             <div class="navbar-header">
               <%= render '/layouts/partials/my_profile'%>
             </div>
-            <div class="navbar-header">
+           
               <%= render '/layouts/partials/admin_add_nav' %>
+
             </div>
-          </div>
-        </nav>
+          
+          </nav>
 
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
       </div>
         
       
-      
-      </div>
-
-
+    <div class="container"> 
       <%= yield %>
+    </div>
+
+
+  
 
     </div>
   </body>

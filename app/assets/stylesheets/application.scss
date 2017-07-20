@@ -28,11 +28,13 @@ header {
 
 body {
 
-	background-image: url('background.jpg');
+	background-image: url('./background.jpg');
 	background-size: contain;
 	background-color: black;
 	background-repeat: no-repeat;
+	width: 100vw;
 	color: yellow;
+	min-height: 1000px;
 }
 
 #logo-index {

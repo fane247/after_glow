@@ -1,12 +1,14 @@
-<div class="row">
-  <h1>Clubs</h1>
-  <% @clubs.each do |club| %>
-    <div class="col-md-4">
-      <div class="club-info-small">
-        <img class="img-responsive img-center" src="<%= club.image_url.square %>">
-        <h3><%= link_to club.name, club %></h3> 
-        <h4>Rating: <%= club.rating %></h4>
+
+  <div class="row">
+    <h1>Clubs</h1>
+    <% @clubs.each do |club| %>
+      <div class="col-md-4">
+        <div class="club-info-small">
+          <img class="img-responsive img-center" src="<%= club.image_url.square %>">
+          <h3><%= link_to club.name, club %></h3> 
+          <h4>Rating: <%= club.rating %></h4>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+
