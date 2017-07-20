@@ -1,3 +1,14 @@
 <% if user_signed_in? %>
-	<%= link_to 'My Profile', user_profile_path(current_user.id), class: "navbar-brand" %>
+
+	
+	<div class="navbar-header">
+		<%= link_to 'My Profile', user_profile_path(current_user.id), class: "navbar-brand" %>
+	</div>
+	
+	<div class="navbar-header">
+		<%= link_to 'Messages', conversations_path, class: "navbar-brand" %>
+	</div>
+
+
+
 <% end %>
