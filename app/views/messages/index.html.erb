@@ -12,12 +12,13 @@
           <% else %>
             <% recipient = User.find(conversation.sender_id) %>
           <% end %>
-          <div class="row">
-            <div class="col-md-4">
+          <% highlight_conversation = conversation.id == @message.conversation.id ? " highlight-conversation" : ""%>
+          <div class="row conversation<%= highlight_conversation %>">
+            <div class="col-md-4 conversation-image-container">
               <%= image_tag recipient.image_url.thumb, class: 'img-responsive' %>
             </div>
             <div class="col-md-8">
-              <%= link_to recipient.name,   conversation_messages_path(conversation)%>
+              <%= link_to recipient.name,   conversation_messages_path(conversation), class: "conversation-name"%>
             </div>
           </div>
         <% end %>
