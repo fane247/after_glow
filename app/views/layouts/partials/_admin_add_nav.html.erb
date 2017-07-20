@@ -1,8 +1,10 @@
 
 
 <% if user_signed_in? && current_user.is_admin %>
-
-	<%= link_to 'Add a Club', new_club_path, class: "navbar-brand" %>
-	<%= link_to 'Add an event', new_event_path, class: "navbar-brand" %>
-	
+	<div class="navbar-header">
+		<%= link_to 'Add a Club', new_club_path, class: "navbar-brand" %>
+	</div>
+	<div class="navbar-header">
+		<%= link_to 'Add an event', new_event_path, class: "navbar-brand" %>
+	</div>
 <% end %>

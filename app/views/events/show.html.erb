@@ -47,7 +47,7 @@
 
 		<div class="col-md-4 user-small">
 			<%= image_tag user.image_url.square, class: "img-responsive" %>
-			<p>Name: <%= user.name %></p>
+			<p>Name: <%= link_to user.name, user_profile_path(user.id) %> </p>
 			<p>Age: <%= age_converter user.dob %></p> 
 			<p>Seeking a <%= user.seeking_gender %> aged <%= user.seeking_age_range_low %> to <%= user.seeking_age_range_high %></p> 
 		</div>

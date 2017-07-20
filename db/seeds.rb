@@ -29,7 +29,7 @@ user2 = User.create({
 
 	email: "jenny@gmail.com",
 	password: "password",
-	name: "Jenny Wobbafet",
+	name: "Jenny Johnson",
 	dob: Date.new(1993, 3, 13),
 	gender: "Female",
 	music_genre_likes: "speedcore, dubstep, techno, orchestra metal, harry potter remixes",
@@ -40,7 +40,7 @@ user2 = User.create({
 	seeking_age_range_low: 23,
 	seeking_age_range_high: 29,
 	seeking_gender: "Male",
-	image_url: File.open(""),
+	image_url: File.open("/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/user_profile_pictures/jenny.jpg"),
 	is_admin: false
 })
 
@@ -59,7 +59,7 @@ user3 = User.create({
 	seeking_age_range_low: 22,
 	seeking_age_range_high: 30,
 	seeking_gender: "Female",
-	image_url: File.open(""),
+	image_url: File.open("/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/user_profile_pictures/joe.jpg"),
 	is_admin: false
 })
 
@@ -67,7 +67,7 @@ user4 = User.create({
 
 	email: "omar@gmail.com",
 	password: "password",
-	name: "Omar IsDaMan",
+	name: "Omar Maynard",
 	dob: Date.new(1993, 5, 19),
 	gender: "Male",
 	music_genre_likes: "Funk, Soul and Disco",
@@ -78,7 +78,7 @@ user4 = User.create({
 	seeking_age_range_low: 22,
 	seeking_age_range_high: 30,
 	seeking_gender: "Female",
-	image_url: File.open(""),
+	image_url: File.open("/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/user_profile_pictures/omar.jpg"),
 	is_admin: false
 })
 
@@ -97,7 +97,45 @@ user5 = User.create({
 	seeking_age_range_low: 22,
 	seeking_age_range_high: 30,
 	seeking_gender: "Male",
-	image_url: File.open(""),
+	image_url: File.open("/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/user_profile_pictures/anne.jpg"),
+	is_admin: false
+})
+
+user_steph = User.create({
+
+	email: "steph@gmail.com",
+	password: "password",
+	name: "Steph A-A",
+	dob: Date.new(1991, 9, 5),
+	gender: "Female",
+	music_genre_likes: "dubstep, pop, grime",
+	bio: "Throwing mad shapes in da club",
+	height: 140,
+	city: "Enfield",
+	interests: "Yoga",
+	seeking_age_range_low: 22,
+	seeking_age_range_high: 30,
+	seeking_gender: "Male",
+	image_url: File.open("/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/user_profile_pictures/steph.jpg"),
+	is_admin: false
+})
+
+user_lee = User.create({
+
+	email: "lee@gmail.com",
+	password: "password",
+	name: "Lee Bury",
+	dob: Date.new(1992, 8, 15),
+	gender: "Female",
+	music_genre_likes: "Metal, rock, PsyTrance",
+	bio: "looking for that alternative lady in my life",
+	height: 140,
+	city: "Luton",
+	interests: "Gaming",
+	seeking_age_range_low: 24,
+	seeking_age_range_high: 30,
+	seeking_gender: "Male",
+	image_url: File.open("/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/user_profile_pictures/lee.jpg"),
 	is_admin: false
 })
 
@@ -320,13 +358,6 @@ event_planet_angel = Event.create({
 # chat.users.push user2
 
 
-event_fabriclive.image_url = File.open('/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/event_fabriclive.jpg')
-event_dimensions.image_url = File.open('/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/event_dimensions.jpg')
-event_shogun_audio.image_url = File.open('/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/event_shogun.jpg')
-event_blackout.image_url = File.open('/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/blackout.jpg')
-event_disco_special.image_url = File.open('/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/event_disco.jpg')
-event_planet_angel.image_url = File.open('/Users/Tech-A43/labs/rails_project/afterglow/app/assets/images/seed_images/event_planet_angel.jpg')
-
 club_fabric.events.push event_fabriclive 
 club_fabric.save
 
@@ -357,16 +388,26 @@ user2.events.push event_fabriclive
 user2.save
 
 user3.events.push event_shogun_audio
-user3.events.push event_blackout
 user3.events.push event_planet_angel
 user3.events.push event_disco_special
 user3.save
 
 user4.events.push event_shogun_audio
 user4.events.push event_blackout
+user4.events.push event_disco_special
 user4.save
 
 user5.events.push event_shogun_audio
 user5.events.push event_blackout
 user5.save
+
+user_steph
+user_lee
+
+user_steph.events.push event_shogun_audio
+user_steph.events.push event_blackout
+user_steph.events.push event_disco_special
+
+user_lee.events.push event_shogun_audio
+user_lee.events.push event_blackout
 

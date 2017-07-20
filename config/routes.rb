@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   
   get "/users/:id/profile", to: 'users#profile', as: :user_profile
 
+  get 'static/welcome'
+
   resources :events
   resources :clubs
 

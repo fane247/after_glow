@@ -95,6 +95,23 @@ input {
 
 }
 
+@media only screen and (max-width: 376px) {
+
+    header {
+        height: 116px;
+    }
+
+    #logo-index img {
+
+		margin-left: -41px;
+		width: 176%;
+		margin-top: 32%;
+	}
+    
+
+
+}
+
 
 
 
