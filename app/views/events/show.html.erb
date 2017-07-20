@@ -39,22 +39,36 @@
 </div>
 	
 
-<div class="row">
-	<h3>Attending:</h3>
-	
-	<% @event.users.each do |user| %>
+<% if user_signed_in? %>
+	<% if current_user.events.exists? @event.id %>
+		<div class="row">
+			<h3>Attending:</h3>
+			
+			<% @event.users.each do |user| %>
 
-		<div class="col-md-4 user-small">
-			<%= image_tag user.image_url.square, class: "img-responsive img-center" %>
-			<p>Name: <%= link_to user.name, user_profile_path(user.id) %> </p>
-			<p>Age: <%= age_converter user.dob %></p> 
-			<p>Seeking a <%= user.seeking_gender %> aged <%= user.seeking_age_range_low %> to <%= user.seeking_age_range_high %></p> 
+				<div class="col-md-4 user-small">
+					<%= image_tag user.image_url.square, class: "img-responsive img-center" %>
+					<p>Name: <%= link_to user.name, user_profile_path(user.id) %> </p>
+					<p>Age: <%= age_converter user.dob %></p> 
+					<p>Seeking a <%= user.seeking_gender %> aged <%= user.seeking_age_range_low %> to <%= user.seeking_age_range_high %></p>
+					<div>
+
+						<%= form_for :conversation, url: '/conversations' do |f| %>
+
+							<%= f.hidden_field :sender_id, value: current_user.id %>
+							<%= f.hidden_field :recipient_id, value: user.id %>
+							<%= f.submit "Message", class: "btn btn-default" %>
+						<% end %>
+					</div>
+
+				</div>
+
+			<% end %>
+
 		</div>
-
 	<% end %>
-
-</div>
-	
+<% end %>
+		
 
 
 
