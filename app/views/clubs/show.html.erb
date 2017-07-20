@@ -1,29 +1,47 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @club.name %>
-</p>
+<div>
+  <div class="row info">
+    <div class="col-md-4">
+      <%= image_tag @club.image_url, class: "img-responsive" %>
+    </div>
+    <div class="col-md-8">
+      <div>
+        <h1><%= @club.name %></h1>
+        <p> <%= @club.description %></p>
+        <p> <%= @club.address %> </p>
+        <p> <%= @club.rating %> </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @club.description %>
-</p>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @club.address %>
-</p>
+    <h2><%= @club.events.name %>'s events</h2>
+    <div class="club-events">
+    <% @club.events.each do |event| %>
+      
+      <div class="row profile-event">
+        <div class="col-md-4">
+          <%= image_tag event.image_url.square, class: "img-responsive" %>
+          <div class="event-date"><%= event.time_start.to_date %></div>
+          <div class="event-time"><%= event.time_start.strftime("%H:%M") %> - <%= event.time_end.strftime("%H:%M") %></div>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @club.rating %>
-</p>
+        </div>
+        <div class="col-md-8">
+          <h3><%= link_to event.name, event %></h3>
+          <h4><%= link_to event.club.name, event.club %></h4>
+          <p>Description: <%= event.description %></p>
+          <p>line-up: <%= event.line_up %></p>
+          
+        </div>
+      </div>
+    
+    <% end %>
+  </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @club.image_url %>
-</p>
+</div>
+
+
+
 
 <%= link_to 'Edit', edit_club_path(@club) %> |
 <%= link_to 'Back', clubs_path %>

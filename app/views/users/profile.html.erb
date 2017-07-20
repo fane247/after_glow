@@ -2,7 +2,7 @@
 
 
 <div>
-	<div class="row user-info">
+	<div class="row info">
 		<div class="col-md-4">
 			<%= image_tag @user.image_url, class: "img-responsive" %>
 		</div>
@@ -25,7 +25,7 @@
 	<div class="user-events">
 		<% @user.events.each do |event| %>
 			
-			<div class="row user-event">
+			<div class="row profile-event">
 				<div class="col-md-4">
 					<%= image_tag event.image_url.square, class: "img-responsive" %>
 					<div class="event-date"><%= event.time_start.to_date %></div>
