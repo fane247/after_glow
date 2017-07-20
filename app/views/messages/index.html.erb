@@ -3,7 +3,28 @@
 <% end %>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-4">
+    <div class="conversations">
+      <% @conversations.each do |conversation| %>
+        <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+          <% if conversation.sender_id == current_user.id %>
+            <% recipient = User.find(conversation.recipient_id) %>
+          <% else %>
+            <% recipient = User.find(conversation.sender_id) %>
+          <% end %>
+          <div class="row">
+            <div class="col-md-4">
+              <%= image_tag recipient.image_url.thumb, class: 'img-responsive' %>
+            </div>
+            <div class="col-md-8">
+              <%= link_to recipient.name,   conversation_messages_path(conversation)%>
+            </div>
+          </div>
+        <% end %>
+      <% end %>  
+    </div>
+  </div>
+  <div class="col-md-8">
     <div class="row"> 
       <div class="message-box">
         <% @messages.each do |message| %>
