@@ -25,6 +25,82 @@ user1 = User.create({
 	is_admin: true
 })
 
+user2 = User.create({
+
+	email: "jenny@gmail.com",
+	password: "password",
+	name: "Jenny Wobbafet",
+	dob: Date.new(1993, 3, 13),
+	gender: "Female",
+	music_genre_likes: "speedcore, dubstep, techno, orchestra metal, harry potter remixes",
+	bio: "I like pokemon and Harry Potter",
+	height: 150,
+	city: "Devon",
+	interests: "Harry Potter, Pokemon and F1",
+	seeking_age_range_low: 23,
+	seeking_age_range_high: 29,
+	seeking_gender: "Male",
+	image_url: File.open(""),
+	is_admin: false
+})
+
+user3 = User.create({
+
+	email: "joe@gmail.com",
+	password: "password",
+	name: "Joe Childs",
+	dob: Date.new(1991, 5, 19),
+	gender: "Male",
+	music_genre_likes: "Rnb, Grime and 80's powerballads",
+	bio: "I'm a pretty laid back guy",
+	height: 170,
+	city: "Luton",
+	interests: "Tennis, Football and burritos",
+	seeking_age_range_low: 22,
+	seeking_age_range_high: 30,
+	seeking_gender: "Female",
+	image_url: File.open(""),
+	is_admin: false
+})
+
+user4 = User.create({
+
+	email: "omar@gmail.com",
+	password: "password",
+	name: "Omar IsDaMan",
+	dob: Date.new(1993, 5, 19),
+	gender: "Male",
+	music_genre_likes: "Funk, Soul and Disco",
+	bio: "I love movies and great TV shows, but most of all I'd love to tell you what I hate about them",
+	height: 170,
+	city: "Croyden",
+	interests: "Movies, TV and Disco",
+	seeking_age_range_low: 22,
+	seeking_age_range_high: 30,
+	seeking_gender: "Female",
+	image_url: File.open(""),
+	is_admin: false
+})
+
+user5 = User.create({
+
+	email: "Anne@gmail.com",
+	password: "password",
+	name: "Anne Oboma",
+	dob: Date.new(1993, 5, 19),
+	gender: "Female",
+	music_genre_likes: "Grime",
+	bio: "2 2's now, you should get to know me fam as that would be blessting. Don't ignore me as that would be a par",
+	height: 140,
+	city: "Croyden",
+	interests: "Running",
+	seeking_age_range_low: 22,
+	seeking_age_range_high: 30,
+	seeking_gender: "Male",
+	image_url: File.open(""),
+	is_admin: false
+})
+
 
 club_fabric = Club.create({
 
@@ -274,4 +350,23 @@ user1.events.push event_blackout
 user1.events.push event_planet_angel
 user1.save
 
+user2.events.push event_shogun_audio
+user2.events.push event_blackout
+user2.events.push event_planet_angel
+user2.events.push event_fabriclive
+user2.save
+
+user3.events.push event_shogun_audio
+user3.events.push event_blackout
+user3.events.push event_planet_angel
+user3.events.push event_disco_special
+user3.save
+
+user4.events.push event_shogun_audio
+user4.events.push event_blackout
+user4.save
+
+user5.events.push event_shogun_audio
+user5.events.push event_blackout
+user5.save
 
