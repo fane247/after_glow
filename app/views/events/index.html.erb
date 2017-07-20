@@ -2,7 +2,7 @@
 
 	<div class="row">
 		<% @events.each do |event| %>
-			<div class="col-md-4">
+			<div class="col-md-4 ">
 				<div class="event-info-small">
 					<img class="img-responsive img-center" src="<%= event.image_url.square %>">
 					<h3><%= link_to event.name, event %></h3>

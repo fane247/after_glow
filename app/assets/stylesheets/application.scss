@@ -20,7 +20,7 @@
 header {
 
 	background-color: black;
-	height: 300px;
+	height: 195px;
 	width:100%;
 	position: relative;
 
@@ -40,16 +40,12 @@ body {
 #logo-index {
 
 	margin:0 35% 0 35%;
+	padding-top: 4%;
   	// background: #ffe200;
 
 }
 
-#logo-index img {
 
-	margin-left: -85px;
-	width: 176%;
-	margin-top: 32%;
-}
 
 .shadowfilter-index {
 	-webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,0,0.80));
@@ -97,22 +93,32 @@ input {
 
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 1024px) {
 
     header {
         height: 116px;
     }
 
-    #logo-index img {
-
-		margin-left: -41px;
-		width: 176%;
-		margin-top: 32%;
+    #logo-index {
+    	margin: 0 35% 0 35%;
+    	padding-top: 6%;	
 	}
+    
+}
+
+@media only screen and (max-width: 376px) {
+
+    header {
+        height: 69px;
+    }
+
+
     
 
 
 }
+
+
 
 
 

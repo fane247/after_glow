@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'static/welcome'
-
   root to: "static#welcome"
 
   put '/events/:id', to: 'events#user_attending', as: :user_attending
   
   get "/users/:id/profile", to: 'users#profile', as: :user_profile
 
-  get 'static/welcome'
+ 
 
   resources :events
   resources :clubs
