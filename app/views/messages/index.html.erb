@@ -47,13 +47,14 @@
         <% end %>
       </div>
          <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-          <div class="form-container">
-            <%= f.text_area :body, class: "form-control" %>
-          </div>
-            <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
-          <div>
-            <%= f.submit "Add Reply", class: "btn btn-default" %>
-          </div>
+
+            <div >
+              <%= f.submit "Add Reply", class: "btn btn-primary" %>
+            </div>
+            <div >
+              <%= f.text_area :body, class: "form-control" %>
+            </div>
+              <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
         <% end %>
       </div>
     </div>

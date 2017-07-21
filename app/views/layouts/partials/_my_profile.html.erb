@@ -4,10 +4,14 @@
 	<div class="navbar-header">
 		<%= link_to 'My Profile', user_profile_path(current_user.id), class: "navbar-brand" %>
 	</div>
-	
-	<div class="navbar-header">
-		<%= link_to 'Messages', conversations_path, class: "navbar-brand" %>
-	</div>
+		
+	<% if Conversation.first != nil %>
+
+		<div class="navbar-header">
+			<%= link_to 'Messages', conversation_messages_path(conversation_id: Conversation.first.id), class: "navbar-brand"    %>
+		</div>
+
+	<% end %>
 
 
 

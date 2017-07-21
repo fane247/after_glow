@@ -1,7 +1,7 @@
 
 
 
-	<div class="row event">
+<div class="row event-header">
 	<div class="col-md-12">
 		<h3><%= @event.name %></h3>
 		<h4><%= link_to @event.club.name, @event.club %></h4>
@@ -53,11 +53,13 @@
 					<p>Seeking a <%= user.seeking_gender %> aged <%= user.seeking_age_range_low %> to <%= user.seeking_age_range_high %></p>
 					<div>
 
-						<%= form_for :conversation, url: '/conversations' do |f| %>
+						<% if user.id != current_user.id %>
+							<%= form_for :conversation, url: '/conversations' do |f| %>
 
-							<%= f.hidden_field :sender_id, value: current_user.id %>
-							<%= f.hidden_field :recipient_id, value: user.id %>
-							<%= f.submit "Message", class: "btn btn-default" %>
+								<%= f.hidden_field :sender_id, value: current_user.id %>
+								<%= f.hidden_field :recipient_id, value: user.id %>
+								<%= f.submit "Message", class: "btn btn-default" %>
+							<% end %>
 						<% end %>
 					</div>
 
