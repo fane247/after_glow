@@ -46,15 +46,22 @@
           <% end %>
         <% end %>
       </div>
-         <%= form_for [@conversation, @message], html: {class: "form-group row"} do |f| %>
 
-            
-              <%= f.submit "Add Reply", class: "btn btn-primary" %>
-              <span><%= f.text_area :body, class: "form-control" %></span>
-            
-            
-              <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
-        <% end %>
-      </div>
+
     </div>
+    <div class="row">
+      <%= form_for [@conversation, @message], html: {class: "form-group row"} do |f| %>
+        <div class="col-md-12">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <%= f.submit "Add Reply", class: "btn btn-primary" %>
+            </span>
+            <%= f.text_field :body, class: "form-control" %>
+            <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+          </div>
+        </div>
+      <% end %>
+
+    
+  </div>
 </div>
