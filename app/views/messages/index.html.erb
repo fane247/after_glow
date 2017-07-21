@@ -46,14 +46,13 @@
           <% end %>
         <% end %>
       </div>
-         <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+         <%= form_for [@conversation, @message], html: {class: "form-group row"} do |f| %>
 
-            <div >
+            
               <%= f.submit "Add Reply", class: "btn btn-primary" %>
-            </div>
-            <div >
-              <%= f.text_area :body, class: "form-control" %>
-            </div>
+              <span><%= f.text_area :body, class: "form-control" %></span>
+            
+            
               <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
         <% end %>
       </div>
