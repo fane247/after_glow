@@ -1,6 +1,11 @@
+<meta name="current_user.id" content="<%= @conversation.sender_id %>">
+<meta name="recipient_user.id" content="<%=@conversation.recipient_id %>">
+<meta name="conversation.id" content="<%=@conversation.id %>">
 <% if @over_ten %>
  <%= link_to "Show Previous", "?m=al" %>
 <% end %>
+
+
 
 <div class="row">
   <div class="col-md-4">
@@ -22,6 +27,7 @@
             </div>
           </div>
         <% end %>
+
       <% end %>  
     </div>
   </div>
@@ -49,12 +55,12 @@
 
 
     </div>
-    <div class="row">
+    <div class="row message-send-box">
       <%= form_for [@conversation, @message], html: {class: "form-group row"} do |f| %>
         <div class="col-md-12">
           <div class="input-group">
             <span class="input-group-btn">
-              <%= f.submit "send", class: "btn btn-primary" %>
+              <%= f.submit "send", class: "btn btn-primary", id: "send-message"%>
             </span>
             <%= f.text_field :body, class: "form-control" %>
             <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
