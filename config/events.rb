@@ -12,4 +12,5 @@ WebsocketRails::EventMap.describe do
   #   end
   # The above will handle an event triggered on the client like `product.new`.
 
+
 end

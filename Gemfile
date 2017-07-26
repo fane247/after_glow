@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# gem 'jquery-turbolinks'
+gem 'websocket-rails', github: 'recurser/websocket-rails', branch: 'bugfix/388-latest-faye-websocket'
+gem 'redis', '~> 3.2'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'carrierwave', '0.10.0'
