@@ -3,6 +3,9 @@
 
 <div class="form-container">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+
+
     <%= devise_error_messages! %>
 
     <div class="form-group">
@@ -77,10 +80,10 @@
       <%= f.file_field :image_url, value: :image_url, class: "filestyle"  %>
     </div>
 
-    </div>
     <div class="actions">
       <%= f.submit "Sign up", class: "btn btn-default" %>
     </div>
+  
 
   <% end %>
 

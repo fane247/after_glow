@@ -12,9 +12,5 @@ WebsocketRails::EventMap.describe do
   #   end
   # The above will handle an event triggered on the client like `product.new`.
 
-  
-  # subscribe :message_sent, :to => MessageSocketController, :with_method => :reload_page
-  subscribe :client_connected, :to => MessageSocketController, :with_method => :client_connected
-  subscribe :message_sent, 'message_socket#reload_page'
-  
+
 end

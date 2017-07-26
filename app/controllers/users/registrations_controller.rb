@@ -17,10 +17,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+  PUT /resource
+  def update
+    byebug
+    super
+  end
 
   # DELETE /resource
   # def destroy
@@ -38,15 +39,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # protected
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
+  If you have extra params to permit, append them to the sanitizer.
+  def configure_sign_up_params
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :dob, :music_genre_likes, :bio, :height, :city, :interests, :seeking_age_range_low, :seeking_age_range_high)
+  end
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
+  If you have extra params to permit, append them to the sanitizer.
+  def configure_account_update_params
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :dob, :music_genre_likes, :bio, :height, :city, :interests, :seeking_age_range_low, :seeking_age_range_high])
+  end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
